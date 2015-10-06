@@ -27,10 +27,6 @@ static CGFloat const kBumpTimeSeconds = 0.13;
 static CGFloat const SECOND_BUMP_DIST = 4.0;
 static CGFloat const kBumpTimeSeconds2 = 0.1;
 
-@interface RKView : UIView
-@property (nonatomic) BOOL isUserChangingBackgroundColor;
-@end
-
 @implementation RKView
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor
@@ -47,7 +43,6 @@ static CGFloat const kBumpTimeSeconds2 = 0.1;
 @implementation RKNotificationHub {
     int curOrderMagnitude;
     UILabel *countLabel;
-    RKView *redCircle;
     CGPoint initialCenter;
     CGRect baseFrame;
     CGRect initialFrame;
@@ -55,6 +50,7 @@ static CGFloat const kBumpTimeSeconds2 = 0.1;
 }
 
 @synthesize hubView;
+@synthesize redCircle;
 
 #pragma mark - SETUP
 

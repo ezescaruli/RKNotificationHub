@@ -39,6 +39,12 @@
  */
 FOUNDATION_EXPORT CGFloat const RKNotificationHubDefaultDiameter;
 
+
+@interface RKView : UIView
+@property (nonatomic) BOOL isUserChangingBackgroundColor;
+@end
+
+
 @interface RKNotificationHub : NSObject
 
 //%%% setup
@@ -70,5 +76,6 @@ FOUNDATION_EXPORT CGFloat const RKNotificationHubDefaultDiameter;
 - (void)bump;
 
 @property (nonatomic)UIView *hubView;
+@property (nonatomic)RKView *redCircle;
 
 @end
